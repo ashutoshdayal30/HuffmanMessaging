@@ -13,8 +13,6 @@ import javafx.stage.Stage;
  * A GUI application for a small messaging app that communicates with the
  * console using Huffman trees to encrypt messages. The class observes the
  * Console class for new messages to process.
- * 
- * @author Jakob Garcia
  */
 public class MessagingApp extends Application implements Observer {
 

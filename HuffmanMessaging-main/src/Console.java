@@ -3,8 +3,6 @@ import java.util.Scanner;
 /**
  * This class is used with the GUI class 'MessagingApp' to communicate back to
  * the GUI using the console. This class is observed by the GUI.
- * 
- * @author Jakob Garcia
  */
 public class Console extends Observable {
 	private Scanner keyboard;

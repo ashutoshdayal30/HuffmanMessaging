@@ -2,8 +2,6 @@
  * A simple class for making another class observable. Works with the Observer
  * class to send updates when changes are made. Can only have one observer for
  * this implementation.
- * 
- * @author Jakob Garcia
  */
 public class Observable {
 	Observer observer;
