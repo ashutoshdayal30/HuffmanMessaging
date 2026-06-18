@@ -1,8 +1,8 @@
 # Huffman Messaging
 
-Huffman Messaging is a small Java messaging demo built as a CSC345 final project. It connects a JavaFX chat window to a terminal-side console, then uses a Huffman tree to encode each message before the other side decodes and displays it.
+Huffman Messaging is a Java application built as a CSC345 final project. It demonstrates Huffman coding in a local messaging workflow between a JavaFX chat window and a terminal-side console. Each message is encoded with a Huffman tree before being decoded and displayed on the receiving side.
 
-This is not a network chat app and it does not generate replies by itself. It is a local two-sided demo: one side is the GUI, the other side is the terminal running the program.
+The project focuses on compression, tree construction, byte-level encoding, and event-driven communication between the GUI and console.
 
 ## What It Does
 
@@ -26,7 +26,6 @@ Messages can also go the other direction. While the app is running, type into th
 HuffmanMessaging/
 ├── README.md
 └── HuffmanMessaging-main/
-    ├── README.md
     └── src/
         ├── Console.java
         ├── Huffman.java
@@ -42,7 +41,7 @@ HuffmanMessaging/
 - JavaFX SDK
 - JUnit 5, only if you want to run the tests in `HuffmanTest.java`
 
-This project does not currently include a build tool setup like Maven or Gradle, so the commands below use `javac` and `java` directly.
+The commands below use `javac` and `java` directly, which keeps the setup simple and makes the compile/run steps easy to inspect.
 
 ## Running the App
 
@@ -99,13 +98,13 @@ To stop the app, close the JavaFX window or press `Ctrl+C` in the terminal.
 
 `src/HuffmanTest.java` contains JUnit tests for the Huffman encoder and decoder. The tests cover normal messages, repeated characters, unique characters, numbers, special characters, mixed case, and a longer mixed-input string.
 
-Because the repo does not include a build configuration yet, running the tests requires adding JUnit 5 to the classpath manually or creating a small Maven/Gradle setup.
+The tests can be run by adding JUnit 5 to the classpath manually or by opening the project in an IDE with JUnit support.
 
-## Current Limitations
+## Project Focus
 
-- The app runs locally only.
-- The GUI and console are the two chat sides.
-- There is no automatic reply system.
-- There is no saved message history.
-- The GUI only shows the most recent few messages.
-- JavaFX must be installed separately.
+- Huffman tree construction from message character frequencies.
+- Encoding strings into compact byte arrays using tree traversal paths.
+- Decoding byte arrays back into the original message.
+- JavaFX interface for one side of the conversation.
+- Terminal-side console for the other side of the conversation.
+- Observer-style updates between the console and GUI.
